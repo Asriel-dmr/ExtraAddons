@@ -17,6 +17,7 @@ import me.mrCookieSlime.Slimefun.bstats.bukkit.Metrics;
 import me.mrCookieSlime.Slimefun.cscorelib2.config.Config;
 import me.mrCookieSlime.Slimefun.cscorelib2.item.CustomItem;
 
+
 public class ExtraAddons extends JavaPlugin implements SlimefunAddon {
 
     @Override
@@ -45,14 +46,15 @@ public class ExtraAddons extends JavaPlugin implements SlimefunAddon {
 
         // Create a new Slimefun ItemStack
         // This class has many constructors, it is very important that you give each item a unique id.
-        SlimefunItemStack hasteHelmet = new SlimefunItemStack("HASTE_HELMET", Material.DIAMOND_CHESTPLATE, "&eMiner's Helmet","&eGives Haste for the best mining expirince!");
+        SlimefunItemStack hasteHelmet = new SlimefunItemStack("HASTE_HELMET", Material.GOLDEN_HELMET, "&eMiner's Helmet","&eGives Haste for the best mining expirince!");
 
         // The Recipe is an ItemStack Array with a length of 9.
         // It represents a Shaped Recipe in a 3x3 crafting grid
         // The machine in which this recipe is crafted in is specified further down
         ItemStack[] hastehelmetrecipe = { SlimefunItems.GOLD_16K, SlimefunItems.GOLD_16K, SlimefunItems.GOLD_16K, SlimefunItems.GOLD_16K, new ItemStack(Material.DIAMOND_HELMET), SlimefunItems.GOLD_16K, null, null, null };
         
-        PotionEffect[] hastehelemeteffect = {new PotionEffect (PotionEffectType.FAST_DIGGING, 1, 1)};
+        PotionEffect[] hastehelemeteffect = { new PotionEffect(PotionEffectType.FAST_DIGGING, 1000, 1)};
+        
         // Now you just have to register the item
         // RecipeType.ENHANCED_CRAFTING_TABLE refers to the machine in which this item is crafted in.
         // Recipy Types from Slimefun itself will automatically add the recipe to that machine

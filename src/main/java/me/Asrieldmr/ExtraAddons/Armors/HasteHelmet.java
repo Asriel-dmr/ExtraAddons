@@ -14,7 +14,7 @@ public class HasteHelmet extends SlimefunItem {
     private final PotionEffect[] effects;
 
     public HasteHelmet(Category category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, PotionEffect[] effects) {
-        super(category, item, recipeType, recipe);
+    	 super(category, item, recipeType, recipe);
 
         this.effects = effects == null ? new PotionEffect[0]: effects;
         
