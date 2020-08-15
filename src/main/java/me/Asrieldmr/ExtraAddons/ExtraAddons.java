@@ -37,7 +37,7 @@ public class ExtraAddons extends JavaPlugin implements SlimefunAddon {
 
         // Create a new Category
         // This Category will use this ItemStack
-        ItemStack categoryItem = new CustomItem(Material.GOLD_BLOCK, "&ExtraAddons", "", "&a> Click to open");
+        ItemStack categoryItem = new CustomItem(Material.GOLD_BLOCK, "&eExtraAddons", "", "&a> Click to open");
 
         // Give your Category a unique id.
         NamespacedKey categoryId = new NamespacedKey(this, "ExtraAddons");
